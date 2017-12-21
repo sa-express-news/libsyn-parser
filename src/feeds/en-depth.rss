@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:cc="http://web.resource.org/cc/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<channel>
+		<atom:link href="https://endepth.libsyn.com/rss" rel="self" type="application/rss+xml"/>
+		<title>EN Depth</title>
+		<pubDate>Thu, 14 Dec 2017 17:41:26 +0000</pubDate>
+		<lastBuildDate>Thu, 21 Dec 2017 17:42:35 +0000</lastBuildDate>
+		<generator>Libsyn WebEngine 2.0</generator>
+		<link>https://alamocityweekly.podiant.co/</link>
+		<language>en</language>
+		<copyright><![CDATA[Copyright © San Antonio Express-News]]></copyright>
+		<docs>https://alamocityweekly.podiant.co/</docs>
+		<managingEditor>saenaudio@gmail.com (saenaudio@gmail.com)</managingEditor>
+		<itunes:summary><![CDATA[A weekly interview podcast from the San Antonio Express-News]]></itunes:summary>
+		<image>
+			<url>https://ssl-static.libsyn.com/p/assets/c/0/e/f/c0ef84a9ca5e003e/5a32b872d9173.png</url>
+			<title>EN Depth</title>
+			<link><![CDATA[https://alamocityweekly.podiant.co/]]></link>
+		</image>
+		<itunes:author>San Antonio Express-News</itunes:author>
+		<itunes:category text="News &amp; Politics"/>
+		<itunes:category text="Society &amp; Culture"></itunes:category>
+		<itunes:category text="Society &amp; Culture">
+			<itunes:category text="Places &amp; Travel"/>
+		</itunes:category>
+		<itunes:image href="https://ssl-static.libsyn.com/p/assets/c/0/e/f/c0ef84a9ca5e003e/5a32b872d9173.png" />
+		<itunes:explicit>no</itunes:explicit>
+		<itunes:owner>
+			<itunes:name><![CDATA[San Antonio Express-News]]></itunes:name>
+			<itunes:email>saenaudio@gmail.com</itunes:email>
+		</itunes:owner>
+		<description><![CDATA[A weekly podcast from the San Antonio Express-News]]></description>
+		<itunes:subtitle><![CDATA[A weekly podcast from the San Antonio Express-News]]></itunes:subtitle>
+		<itunes:type>episodic</itunes:type>
+				<item>
+			<title>Aaron Nelsen | Decades of a cover-up by the Catholic Church finally end in murder conviction</title>
+			<pubDate>Thu, 14 Dec 2017 17:41:26 +0000</pubDate>
+			<guid isPermaLink="false"><![CDATA[8ebbac61-e627-416e-acfd-63d208094d8f]]></guid>
+			<link><![CDATA[https://traffic.libsyn.com/secure/endepth/35c32463a665c8.mp3]]></link>
+			<itunes:image href="https://ssl-static.libsyn.com/p/assets/d/e/8/6/de86ca1e9128a0d1/5a32b872d9173.png" />
+			<description><![CDATA[An 85 year old former Priest is convicted of the 1960 murder of a former South Texas beauty queen. Rio Grande Valley Bureau reporter Aaron Nelsen shares his insight to this story, originally published on ExpressNews.com on December 9th 2017. The full story can be found here: http://www.expressnews.com/news/local/article/Decades-of-a-cover-up-by-the-Catholic-Church-12419037.php﻿]]></description>
+			<content:encoded><![CDATA[An 85 year old former Priest is convicted of the 1960 murder of a former South Texas beauty queen. Rio Grande Valley Bureau reporter Aaron Nelsen shares his insight to this story, originally published on ExpressNews.com on December 9th 2017. The full story can be found here: http://www.expressnews.com/news/local/article/Decades-of-a-cover-up-by-the-Catholic-Church-12419037.php﻿]]></content:encoded>
+			<enclosure length="17103941" type="audio/mpeg" url="https://traffic.libsyn.com/secure/endepth/35c32463a665c8.mp3?dest-id=624659" />
+			<itunes:duration>23:42</itunes:duration>
+			<itunes:explicit>no</itunes:explicit>
+			<itunes:keywords />
+			<itunes:subtitle><![CDATA[An 85 year old former Priest is convicted of the 1960 murder of a former South Texas beauty queen. Rio Grande Valley Bureau reporter Aaron Nelsen shares his insight to this story, originally published on ExpressNews.com on December 9th 2017. The full...]]></itunes:subtitle>
+					</item>
+	</channel>
+</rss>
