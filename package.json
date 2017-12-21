@@ -1,7 +1,7 @@
 {
-  "name": "saen-podcast-server",
+  "name": "saen-libsyn-feed-parser",
   "version": "0.0.1",
-  "description": "Proxy server to fetch EN RSS feeds from Libsyn.",
+  "description": "Parse Libysn RSS feeds into JavaScript objects.",
   "main": "index.js",
   "scripts": {
     "test": "test",
