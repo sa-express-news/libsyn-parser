@@ -1,8 +1,9 @@
 {
-  "name": "saen-libsyn-feed-parser",
+  "name": "libsyn-feed-parser",
   "version": "0.0.1",
-  "description": "Parse Libysn RSS feeds into JavaScript objects.",
+  "description": "Convert Libysn RSS feeds into JavaScript objects.",
   "main": "index.js",
+  "types": "index.d.ts",
   "repository": "https://github.com/sa-express-news/libsyn-parser",
   "scripts": {
     "pretest": "tsc",
