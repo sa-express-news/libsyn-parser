@@ -4,7 +4,7 @@ import * as nock from 'nock';
 import { stub } from 'sinon';
 import * as path from 'path';
 import * as fetch from 'isomorphic-fetch';
-import { fetchFeed, getPodcastMeta, getPodcastEpisodes } from './index'
+import { fetchFeed, getPodcastMeta, getPodcastEpisodes, getPodcast } from './index'
 
 const { assert } = chai;
 
@@ -29,6 +29,35 @@ describe('Libsyn Parser', async () => {
     });
     after(() => {
         nock.cleanAll();
+    });
+
+    describe('getPodcast', () => {
+        let podcasts;
+        before(async () => {
+            const briefing = await getPodcast(expressBriefingEndpoint);
+            const depth = await getPodcast(enDepthEndpoint);
+            podcasts = [briefing, depth];
+        });
+        it('returns an object', () => {
+            podcasts.forEach((podcast) => {
+                assert.isObject(podcast);
+            });
+        });
+        it('the object has a meta property, which is an object', () => {
+            podcasts.forEach((podcast) => {
+                assert.property(podcast, 'meta');
+                assert.isObject(podcast.meta);
+            });
+        });
+        it('the object has an episodes property, which is an array of objects', () => {
+            podcasts.forEach((podcast) => {
+                assert.property(podcast, 'episodes');
+                assert.isArray(podcast.episodes);
+                podcast.episodes.forEach((episode) => {
+                    assert.isObject(episode);
+                });
+            });
+        });
     });
 
     describe('fetchFeed', () => {
