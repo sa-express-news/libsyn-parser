@@ -34,3 +34,8 @@ export interface PodcastEpisode {
     link: string;
     description: string;
 }
+
+export interface Podcast {
+    meta: PodcastMeta;
+    episodes: PodcastEpisode[];
+}
