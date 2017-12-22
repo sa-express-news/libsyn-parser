@@ -8,7 +8,8 @@
     "pretest": "tsc",
     "test": "NODE_ENV=test mocha ./build/**/**/spec.js",
     "prestart": "tsc",
-    "start": "node build/index.js"
+    "start": "node build/index.js",
+    "build": "tsc src/index.ts --outfile './index.js' --module 'amd' --lib 'DOM','es2015'"
   },
   "author": "Kia Farhang",
   "license": "ISC",
