@@ -85,34 +85,34 @@ describe('Libsyn Parser', async () => {
     });
 
     describe('getPodcastMeta', () => {
-        let feeds;
+        let channels;
         before(async () => {
             const briefingFeed = await fetchFeed(expressBriefingEndpoint);
             const depthFeed = await fetchFeed(enDepthEndpoint);
-            feeds = [briefingFeed, depthFeed];
+            channels = [briefingFeed.rss.channel[0], depthFeed.rss.channel[0]];
         });
         it('returns an object', () => {
-            feeds.forEach((feed) => {
-                assert.isObject(getPodcastMeta(feed));
+            channels.forEach((channel) => {
+                assert.isObject(getPodcastMeta(channel));
             });
         });
         it('the object has a title property, which is a string', () => {
-            feeds.forEach((feed) => {
-                const meta = getPodcastMeta(feed);
+            channels.forEach((channel) => {
+                const meta = getPodcastMeta(channel);
                 assert.property(meta, 'title');
                 assert.isString(meta.title);
             });
         });
         it('the object has a description property, which is a string', () => {
-            feeds.forEach((feed) => {
-                const meta = getPodcastMeta(feed);
+            channels.forEach((channel) => {
+                const meta = getPodcastMeta(channel);
                 assert.property(meta, 'description');
                 assert.isString(meta.description);
             });
         });
         it('the object has an image property, which is a string', () => {
-            feeds.forEach((feed) => {
-                const meta = getPodcastMeta(feed);
+            channels.forEach((channel) => {
+                const meta = getPodcastMeta(channel);
                 assert.property(meta, 'image');
                 assert.isString(meta.image);
             });
