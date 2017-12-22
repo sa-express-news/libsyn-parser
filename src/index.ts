@@ -44,7 +44,7 @@ export const getPodcastMeta = (rssChannel: RSSChannel): PodcastMeta => {
     return {
         title: rssChannel.title[0],
         description: rssChannel.description[0],
-        image: rssChannel.image[0].link[0]
+        imageURL: rssChannel.image[0].link[0]
     }
 }
 

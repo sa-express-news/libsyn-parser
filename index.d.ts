@@ -27,7 +27,7 @@ export interface RSSFeedItem {
 export interface PodcastMeta {
     title: string;
     description: string;
-    image: string;
+    imageURL: string;
 }
 
 export interface PodcastEpisode {

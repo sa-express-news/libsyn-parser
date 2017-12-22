@@ -139,11 +139,11 @@ describe('Libsyn Parser', async () => {
                 assert.isString(meta.description);
             });
         });
-        it('the object has an image property, which is a string', () => {
+        it('the object has an imageURL property, which is a string', () => {
             channels.forEach((channel) => {
                 const meta = getPodcastMeta(channel);
-                assert.property(meta, 'image');
-                assert.isString(meta.image);
+                assert.property(meta, 'imageURL');
+                assert.isString(meta.imageURL);
             });
         });
     });
