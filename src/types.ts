@@ -21,3 +21,16 @@ export interface RSSFeedItem {
     link: [string];
     description: [string];
 }
+
+export interface PodcastMeta {
+    title: string;
+    description: string;
+    image: string;
+}
+
+export interface PodcastEpisode {
+    title: string;
+    publicationDate: Date;
+    link: string;
+    description: string;
+}
