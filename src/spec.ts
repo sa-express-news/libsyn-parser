@@ -4,7 +4,7 @@ import * as nock from 'nock';
 import { stub } from 'sinon';
 import * as path from 'path';
 import * as fetch from 'isomorphic-fetch';
-import { parsePromise, fetchFeed, getPodcastMeta } from './index'
+import { fetchFeed, getPodcastMeta, getPodcastEpisodes } from './index'
 
 const { assert } = chai;
 
@@ -115,6 +115,65 @@ describe('Libsyn Parser', async () => {
                 const meta = getPodcastMeta(channel);
                 assert.property(meta, 'image');
                 assert.isString(meta.image);
+            });
+        });
+    });
+
+    describe('getPodcastEpisodes', () => {
+        let channels;
+        before(async () => {
+            const briefingFeed = await fetchFeed(expressBriefingEndpoint);
+            const depthFeed = await fetchFeed(enDepthEndpoint);
+            channels = [briefingFeed.rss.channel[0], depthFeed.rss.channel[0]];
+        });
+        it('returns an array', () => {
+            channels.forEach((channel) => {
+                const episodes = getPodcastEpisodes(channel);
+                assert.isArray(episodes);
+            });
+        });
+        it('each array item is an object', () => {
+            channels.forEach((channel) => {
+                const episodes = getPodcastEpisodes(channel);
+                episodes.forEach((episode) => {
+                    assert.isObject(episode);
+                });
+            });
+        });
+        it('each object has a string title property', () => {
+            channels.forEach((channel) => {
+                const episodes = getPodcastEpisodes(channel);
+                episodes.forEach((episode) => {
+                    assert.property(episode, 'title');
+                    assert.isString(episode.title);
+                });
+            });
+        });
+        it('each object has a string link property', () => {
+            channels.forEach((channel) => {
+                const episodes = getPodcastEpisodes(channel);
+                episodes.forEach((episode) => {
+                    assert.property(episode, 'link');
+                    assert.isString(episode.link);
+                });
+            });
+        });
+        it('each object has a string description property', () => {
+            channels.forEach((channel) => {
+                const episodes = getPodcastEpisodes(channel);
+                episodes.forEach((episode) => {
+                    assert.property(episode, 'description');
+                    assert.isString(episode.description);
+                });
+            });
+        });
+        it('each object has a Date publicationDate property', () => {
+            channels.forEach((channel) => {
+                const episodes = getPodcastEpisodes(channel);
+                episodes.forEach((episode) => {
+                    assert.property(episode, 'publicationDate');
+                    assert.typeOf(episode.publicationDate, 'Date');
+                });
             });
         });
     });
