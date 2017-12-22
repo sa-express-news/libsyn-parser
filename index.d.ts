@@ -33,7 +33,7 @@ export interface PodcastMeta {
 export interface PodcastEpisode {
     title: string;
     publicationDate: Date;
-    link: string;
+    audioFileURL: string;
     description: string;
 }
 

@@ -178,12 +178,12 @@ describe('Libsyn Parser', async () => {
                 });
             });
         });
-        it('each object has a string link property', () => {
+        it('each object has a string audioFileURL property', () => {
             channels.forEach((channel) => {
                 const episodes = getPodcastEpisodes(channel);
                 episodes.forEach((episode) => {
-                    assert.property(episode, 'link');
-                    assert.isString(episode.link);
+                    assert.property(episode, 'audioFileURL');
+                    assert.isString(episode.audioFileURL);
                 });
             });
         });

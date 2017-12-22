@@ -54,7 +54,7 @@ export const getPodcastEpisodes = (rssChannel: RSSChannel): PodcastEpisode[] => 
         episodes.push({
             title: item.title[0],
             publicationDate: new Date(item.pubDate[0]),
-            link: item.link[0],
+            audioFileURL: item.link[0],
             description: item.description[0]
         });
     });
