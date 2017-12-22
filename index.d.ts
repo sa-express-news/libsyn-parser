@@ -1,4 +1,4 @@
-export async function getPodcast(feedUrl: string): Promise<Podcast>;
+export function getPodcast(feedUrl: string): Promise<Podcast>;
 
 export interface RSSResponse {
     rss: {

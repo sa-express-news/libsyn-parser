@@ -1,6 +1,6 @@
 import * as xml2js from 'xml2js';
 import * as fetch from 'isomorphic-fetch';
-import { RSSResponse, RSSChannel, PodcastMeta, PodcastEpisode, Podcast, RSSFeedItem } from './types';
+import { RSSResponse, RSSChannel, PodcastMeta, PodcastEpisode, Podcast, RSSFeedItem } from '../index';
 
 const parser = new xml2js.Parser({
     trim: true
