@@ -20,8 +20,14 @@ export interface RSSChannel {
 export interface RSSFeedItem {
     title: [string];
     pubDate: [string];
-    link: [string];
-    description: [string];
+    description: [string],
+    enclosure: [{
+        '$': {
+            length: string;
+            type: string;
+            url: string;
+        }
+    }];
 }
 
 export interface PodcastMeta {
