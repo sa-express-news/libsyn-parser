@@ -33,10 +33,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-define("types", ["require", "exports"], function (require, exports) {
-    "use strict";
-    exports.__esModule = true;
-});
 define("index", ["require", "exports", "xml2js", "isomorphic-fetch"], function (require, exports, xml2js, fetch) {
     "use strict";
     var _this = this;
@@ -101,7 +97,7 @@ define("index", ["require", "exports", "xml2js", "isomorphic-fetch"], function (
         return {
             title: rssChannel.title[0],
             description: rssChannel.description[0],
-            image: rssChannel.image[0].link[0]
+            imageURL: rssChannel.image[0].link[0]
         };
     };
     exports.getPodcastEpisodes = function (rssChannel) {
@@ -110,7 +106,7 @@ define("index", ["require", "exports", "xml2js", "isomorphic-fetch"], function (
             episodes.push({
                 title: item.title[0],
                 publicationDate: new Date(item.pubDate[0]),
-                link: item.link[0],
+                audioFileURL: item.enclosure[0]['$'].url,
                 description: item.description[0]
             });
         });
