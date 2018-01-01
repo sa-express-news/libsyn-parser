@@ -146,6 +146,17 @@ describe('Libsyn Parser', async () => {
                 assert.isString(meta.imageURL);
             });
         });
+        it('the imageURL property is a link to an image', () => {
+            channels.forEach((channel) => {
+                const meta = getPodcastMeta(channel);
+                const { imageURL } = meta;
+                let isImageURL = false;
+                if (imageURL.includes('.png') || imageURL.includes('.jpg') || imageURL.includes('.jpeg')) {
+                    isImageURL = true;
+                }
+                assert.isTrue(isImageURL);
+            });
+        });
     });
 
     describe('getPodcastEpisodes', () => {

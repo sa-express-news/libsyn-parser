@@ -97,7 +97,7 @@ define("index", ["require", "exports", "xml2js", "isomorphic-fetch"], function (
         return {
             title: rssChannel.title[0],
             description: rssChannel.description[0],
-            imageURL: rssChannel.image[0].link[0]
+            imageURL: rssChannel.image[0].url[0]
         };
     };
     exports.getPodcastEpisodes = function (rssChannel) {
