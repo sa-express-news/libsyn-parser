@@ -187,6 +187,15 @@ describe('Libsyn Parser', async () => {
                 });
             });
         });
+        it('each audioFileURL property is a link to an MP3 file', () => {
+            channels.forEach((channel) => {
+                const episodes = getPodcastEpisodes(channel);
+                episodes.forEach((episode) => {
+                    const { audioFileURL } = episode;
+                    assert.include(audioFileURL, '.mp3');
+                });
+            });
+        });
         it('each object has a string description property', () => {
             channels.forEach((channel) => {
                 const episodes = getPodcastEpisodes(channel);
